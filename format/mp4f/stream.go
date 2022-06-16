@@ -35,6 +35,7 @@ type Stream struct {
 	cttsEntry              *mp4io.CompositionOffsetEntry
 	moof                   mp4fio.MovieFrag
 	buffer                 []byte
+	bufferDuration         time.Duration
 }
 
 func timeToTs(tm time.Duration, timeScale int64) int64 {

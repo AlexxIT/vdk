@@ -23,6 +23,8 @@ type Muxer struct {
 	fragmentIndex int
 	streams       []*Stream
 	path          string
+
+	keyframeSize int
 }
 
 func NewMuxer(w *os.File) *Muxer {
